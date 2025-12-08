@@ -803,7 +803,7 @@ const Dashboard: React.FC = () => {
                                                         <XAxis type="number" stroke="#94a3b8" hide />
                                                         <YAxis dataKey="category" type="category" width={100} tick={{ fill: '#94a3b8', fontSize: 10 }} />
                                                         <Bar dataKey="amount" name="Montant" radius={[0, 4, 4, 0]}>
-                                                            {topExpenses.map((entry, index) => (
+                                                            {topExpenses.map((_, index) => (
                                                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                                             ))}
                                                             <LabelList dataKey="amount" position="right" fill="#ef4444" fontSize={10} formatter={(val: number) => val ? `${val.toLocaleString()}€` : ''} />
