@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = "https://financial-dashboard-nine-lyart.vercel.app/api"
+BASE_URL = "https://financial-dashboard-2rsd.onrender.com/api"
 USERNAME = "zaxodon@gmail.com"
 PASSWORD = "Vb44sjrkm!"
 

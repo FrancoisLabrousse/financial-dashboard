@@ -37,7 +37,34 @@ def create_checkout_session():
     except Exception as e:
         return jsonify(error=str(e)), 500
 
-@payment_bp.route('/webhook', methods=['POST'])
+@payment_bp.route('/verify-session', methods=['POST'])
+@jwt_required()
+def verify_session():
+    stripe.api_key = current_app.config['STRIPE_SECRET_KEY']
+    data = request.get_json()
+    session_id = data.get('session_id')
+    
+    if not session_id:
+        return jsonify({"error": "Session ID required"}), 400
+        
+    try:
+        session = stripe.checkout.Session.retrieve(session_id)
+        if session.payment_status == 'paid':
+            # Manually update user status if webhook hasn't fired yet
+            current_user_id = get_jwt_identity()
+            user = User.query.get(current_user_id)
+            if user and user.subscription_status != 'active':
+                user.subscription_status = 'active'
+                user.stripe_customer_id = session.get('customer')
+                user.stripe_subscription_id = session.get('subscription')
+                db.session.commit()
+                return jsonify({"status": "active", "message": "Subscription activated"}), 200
+            elif user and user.subscription_status == 'active':
+                 return jsonify({"status": "active", "message": "Already active"}), 200
+        
+        return jsonify({"status": session.payment_status}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 def webhook():
     stripe.api_key = current_app.config['STRIPE_SECRET_KEY']
     payload = request.get_data(as_text=True)

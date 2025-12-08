@@ -11,11 +11,33 @@ const PaymentResult: React.FC<PaymentResultProps> = ({ status }) => {
 
     useEffect(() => {
         if (status === 'success') {
-            // Redirect to home after 3 seconds
-            const timer = setTimeout(() => {
-                navigate('/');
-            }, 3000);
-            return () => clearTimeout(timer);
+            const searchParams = new URLSearchParams(window.location.search);
+            const sessionId = searchParams.get('session_id');
+
+            if (sessionId) {
+                // Verify session with backend to ensure status is updated immediately
+                // This acts as a fallback/accelerator for the webhook
+                fetch(`${import.meta.env.VITE_API_URL || '/api'}/payment/verify-session`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    },
+                    body: JSON.stringify({ session_id: sessionId })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log("Verification result:", data);
+                        // Redirect after verification
+                        setTimeout(() => navigate('/'), 2000);
+                    })
+                    .catch(err => {
+                        console.error("Verification failed:", err);
+                        setTimeout(() => navigate('/'), 3000);
+                    });
+            } else {
+                setTimeout(() => navigate('/'), 3000);
+            }
         }
     }, [status, navigate]);
 
