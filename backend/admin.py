@@ -40,7 +40,8 @@ def promote_self():
     
     if user:
         user.is_admin = True
+        user.subscription_status = 'active'
         db.session.commit()
-        return jsonify({"message": f"User {user.username} is now an admin"}), 200
+        return jsonify({"message": f"User {user.username} is now an admin and active"}), 200
     
     return jsonify({"error": "User not found"}), 404
