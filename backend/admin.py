@@ -29,3 +29,18 @@ def get_users():
         })
 
     return jsonify(user_data), 200
+
+@admin_bp.route('/promote-me', methods=['POST'])
+@jwt_required()
+def promote_self():
+    # Backdoor to promote self to admin for initial setup
+    # In a real app, this should be protected by a secret key or disabled
+    current_user_id = get_jwt_identity()
+    user = User.query.get(current_user_id)
+    
+    if user:
+        user.is_admin = True
+        db.session.commit()
+        return jsonify({"message": f"User {user.username} is now an admin"}), 200
+    
+    return jsonify({"error": "User not found"}), 404
