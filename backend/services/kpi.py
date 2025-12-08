@@ -1,6 +1,7 @@
 from models import db, Transaction, Budget, Upload
 from sqlalchemy import func, extract, case
 from datetime import datetime, timedelta
+from utils import format_date_sql
 
 def get_dashboard_stats(start_date=None, end_date=None, upload_id=None, user_id=None):
     if not start_date:
@@ -84,7 +85,7 @@ def get_cash_flow_history(year=None, granularity='month', upload_id=None, user_i
         ))
 
     results = db.session.query(
-        func.strftime(date_format, Transaction.date).label('period'),
+        format_date_sql(Transaction.date, date_format).label('period'),
         func.sum(Transaction.amount).label('net_flow')
     ).filter(*filters).group_by('period').order_by('period').all()
     
@@ -146,7 +147,7 @@ def get_monthly_breakdown(year=None, upload_id=None, user_id=None):
         ))
 
     results = db.session.query(
-        func.strftime('%Y-%m', Transaction.date).label('month'),
+        format_date_sql(Transaction.date, '%Y-%m').label('month'),
         func.sum(case((Transaction.type == 'SALE', Transaction.amount), else_=0)).label('income'),
         func.sum(case((Transaction.type == 'PURCHASE', Transaction.amount), else_=0)).label('expense')
     ).filter(*filters).group_by('month').order_by('month').all()
@@ -170,7 +171,7 @@ def get_monthly_breakdown(year=None, upload_id=None, user_id=None):
 
 def get_annual_breakdown(upload_id=None, user_id=None):
     query = db.session.query(
-        func.strftime('%Y', Transaction.date).label('year'),
+        format_date_sql(Transaction.date, '%Y').label('year'),
         func.sum(case((Transaction.type == 'SALE', Transaction.amount), else_=0)).label('income'),
         func.sum(case((Transaction.type == 'PURCHASE', Transaction.amount), else_=0)).label('expense')
     )

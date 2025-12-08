@@ -3,11 +3,12 @@ from sqlalchemy import func, case
 from datetime import datetime, timedelta
 import pandas as pd
 import numpy as np
+from utils import format_date_sql
 
 def generate_forecast(months=6, upload_id=None, user_id=None):
     # 1. Get historical monthly data
     query = db.session.query(
-        func.strftime('%Y-%m', Transaction.date).label('month'),
+        format_date_sql(Transaction.date, '%Y-%m').label('month'),
         func.sum(case((Transaction.type == 'SALE', Transaction.amount), else_=0)).label('income'),
         func.sum(case((Transaction.type == 'PURCHASE', Transaction.amount), else_=0)).label('expense')
     )
