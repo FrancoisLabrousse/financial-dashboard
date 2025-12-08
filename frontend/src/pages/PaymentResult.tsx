@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 interface PaymentResultProps {
@@ -8,7 +8,6 @@ interface PaymentResultProps {
 
 const PaymentResult: React.FC<PaymentResultProps> = ({ status }) => {
     const navigate = useNavigate();
-    const [searchParams] = useSearchParams();
 
     useEffect(() => {
         if (status === 'success') {

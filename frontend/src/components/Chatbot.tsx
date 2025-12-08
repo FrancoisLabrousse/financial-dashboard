@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { MessageCircle, X, Send, Bot } from 'lucide-react';
 
 interface Message {
     id: number;
@@ -89,8 +89,8 @@ const Chatbot: React.FC = () => {
                             >
                                 <div
                                     className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === 'user'
-                                            ? 'bg-blue-600 text-white rounded-tr-none'
-                                            : 'bg-slate-700 text-slate-200 rounded-tl-none border border-slate-600'
+                                        ? 'bg-blue-600 text-white rounded-tr-none'
+                                        : 'bg-slate-700 text-slate-200 rounded-tl-none border border-slate-600'
                                         }`}
                                 >
                                     {msg.text}
@@ -127,8 +127,8 @@ const Chatbot: React.FC = () => {
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 ${isOpen
-                        ? 'bg-slate-700 text-slate-300 rotate-90'
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-blue-500/25'
+                    ? 'bg-slate-700 text-slate-300 rotate-90'
+                    : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-blue-500/25'
                     }`}
             >
                 {isOpen ? <X size={24} /> : <MessageCircle size={24} />}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, FileText, CheckCircle, XCircle, Clock, Trash2 } from 'lucide-react';
+import { ArrowLeft, FileText, Clock, Trash2 } from 'lucide-react';
 import api from '../api';
 
 interface UploadRecord {
@@ -14,7 +14,6 @@ interface UploadRecord {
 const History: React.FC = () => {
     const navigate = useNavigate();
     const [uploads, setUploads] = useState<UploadRecord[]>([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchUploads = async () => {
@@ -23,8 +22,6 @@ const History: React.FC = () => {
                 setUploads(response.data);
             } catch (error) {
                 console.error("Error fetching history:", error);
-            } finally {
-                setLoading(false);
             }
         };
         fetchUploads();

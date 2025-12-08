@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend, Cell, ComposedChart, Line, LabelList } from 'recharts';
-import { DollarSign, TrendingUp, ShoppingCart, CreditCard, Activity, Trash2, Calendar, PieChart as PieChartIcon, ArrowLeft, Percent, AlertCircle, LineChart, X, Download, Clock } from 'lucide-react';
+import { DollarSign, TrendingUp, ShoppingCart, Activity, Calendar, PieChart as PieChartIcon, ArrowLeft, Percent, AlertCircle, LineChart, X, Download, Clock } from 'lucide-react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import api from '../api';
 import KPICard from '../components/KPICard';
@@ -112,12 +112,7 @@ const Dashboard: React.FC = () => {
         fetchData();
     }, [uploadId]);
 
-    const handleBarClick = async (data: any, index: number, event: React.MouseEvent) => {
-        // Recharts onClick passes the data object of the clicked item
-        // But for BarChart with multiple bars (Income/Expense), we need to know WHICH bar was clicked.
-        // Unfortunately, Recharts generic onClick on BarChart doesn't easily distinguish the series.
-        // Instead, we put onClick on the specific <Bar> components.
-    };
+
 
     const handleSeriesClick = async (data: any, type: 'income' | 'expense') => {
         const item = data.payload || data;
@@ -390,7 +385,7 @@ const Dashboard: React.FC = () => {
                                                     cursor={{ fill: '#334155', opacity: 0.4 }}
                                                 />
                                                 <Bar dataKey="amount" name="Montant" radius={[0, 4, 4, 0]}>
-                                                    {topExpenses.map((entry, index) => (
+                                                    {topExpenses.map((_, index) => (
                                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                                     ))}
                                                     <LabelList dataKey="amount" position="right" fill="#ef4444" fontWeight="bold" formatter={(val: number) => `${val.toLocaleString()}€`} />
@@ -539,7 +534,7 @@ const Dashboard: React.FC = () => {
                                                 formatter={(value: number) => [value ? `${value.toLocaleString()}€` : '0€', 'Montant']}
                                             />
                                             <Bar dataKey="amount" name="Montant" radius={[0, 4, 4, 0]}>
-                                                {topIncome.map((entry, index) => (
+                                                {topIncome.map((_, index) => (
                                                     <Cell key={`cell-${index}`} fill={GREEN_COLORS[index % GREEN_COLORS.length]} />
                                                 ))}
                                                 <LabelList dataKey="amount" position="right" fill="#10b981" fontWeight="bold" formatter={(val: number) => val ? `${val.toLocaleString()}€` : ''} />
@@ -575,7 +570,7 @@ const Dashboard: React.FC = () => {
                                                 formatter={(value: number) => [value ? `${value.toLocaleString()}€` : '0€', 'Montant']}
                                             />
                                             <Bar dataKey="amount" name="Montant" radius={[0, 4, 4, 0]}>
-                                                {topExpenses.map((entry, index) => (
+                                                {topExpenses.map((_, index) => (
                                                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                                 ))}
                                                 <LabelList dataKey="amount" position="right" fill="#ef4444" fontWeight="bold" formatter={(val: number) => val ? `${val.toLocaleString()}€` : ''} />
@@ -789,7 +784,7 @@ const Dashboard: React.FC = () => {
                                                         <XAxis type="number" stroke="#94a3b8" hide />
                                                         <YAxis dataKey="category" type="category" width={100} tick={{ fill: '#94a3b8', fontSize: 10 }} />
                                                         <Bar dataKey="amount" name="Montant" radius={[0, 4, 4, 0]}>
-                                                            {topIncome.map((entry, index) => (
+                                                            {topIncome.map((_, index) => (
                                                                 <Cell key={`cell-${index}`} fill={GREEN_COLORS[index % GREEN_COLORS.length]} />
                                                             ))}
                                                             <LabelList dataKey="amount" position="right" fill="#10b981" fontSize={10} formatter={(val: number) => val ? `${val.toLocaleString()}€` : ''} />
