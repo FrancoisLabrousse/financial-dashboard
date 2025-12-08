@@ -7,3 +7,6 @@ openpyxl
 python-dotenv
 gunicorn
 xlrd
+flask-jwt-extended
+flask-mail
+stripe
