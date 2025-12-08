@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                         <span className="text-slate-200 font-medium">Mes tableaux de bord</span>
                     </button>
 
-                    {user && user.is_admin && user.email === 'francois.labrousse75@sfr.fr' && (
+                    {user && user.is_admin && (
                         <button
                             onClick={() => navigate('/admin')}
                             className="flex items-center justify-center gap-2 p-4 bg-slate-800 hover:bg-slate-700 rounded-xl border border-slate-700 transition-all group w-full max-w-xs"
