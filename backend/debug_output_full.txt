@@ -1,0 +1,333 @@
+Analyzing c:\Users\zaxod\OneDrive\Documents\APPS\financial-dashboard\backend\uploads\PME_Cabanes_Detaille.xlsx...
+Columns found: ['Date', 'Type', 'Description', 'Montant (€)', 'Catégorie', 'Mois']
+Mapped columns: {'date': 'date', 'amount': 'montant (€)', 'description': 'description', 'category': 'catégorie'}
+
+--- ALL Transactions ---
+Idx | RawDate | ParsedDate | Description | RawAmount | ParsedAmount | Type | FinalAmount
+0 | 2025-01-07 | 2025-07-01 | Vente cabane de jardin | 7653 | 7653 | SALE | 7653
+1 | 2025-01-06 | 2025-06-01 | Vente cabane de jardin | 4680 | 4680 | SALE | 4680
+2 | 2025-01-28 | 2025-01-28 | Vente cabane de jardin | 7243 | 7243 | SALE | 7243
+3 | 2025-01-22 | 2025-01-22 | Vente cabane de jardin | 9464 | 9464 | SALE | 9464
+4 | 2025-01-03 | 2025-03-01 | Vente cabane de jardin | 9742 | 9742 | SALE | 9742
+5 | 2025-01-04 | 2025-04-01 | Vente cabane de jardin | 7223 | 7223 | SALE | 7223
+6 | 2025-01-28 | 2025-01-28 | Vente cabane de jardin | 11781 | 11781 | SALE | 11781
+7 | 2025-01-20 | 2025-01-20 | Vente cabane de jardin | 8353 | 8353 | SALE | 8353
+8 | 2025-01-21 | 2025-01-21 | Vente cabane de jardin | 13694 | 13694 | SALE | 13694
+9 | 2025-01-01 | 2025-01-01 | Vente cabane de jardin | 4472 | 4472 | SALE | 4472
+10 | 2025-01-25 | 2025-01-25 | Vente cabane de jardin | 5749 | 5749 | SALE | 5749
+11 | 2025-01-03 | 2025-03-01 | Vente cabane de jardin | 8325 | 8325 | SALE | 8325
+12 | 2025-01-17 | 2025-01-17 | Vente cabane de jardin | 14668 | 14668 | SALE | 14668
+13 | 2025-01-22 | 2025-01-22 | Vente cabane de jardin | 8163 | 8163 | SALE | 8163
+14 | 2025-01-23 | 2025-01-23 | Vente cabane de jardin | 13018 | 13018 | SALE | 13018
+15 | 2025-01-15 | 2025-01-15 | Vente cabane de jardin | 4729 | 4729 | SALE | 4729
+16 | 2025-01-23 | 2025-01-23 | Vente cabane de jardin | 11041 | 11041 | SALE | 11041
+17 | 2025-01-28 | 2025-01-28 | Achat marchandises (cabane) | 2416 | 2416 | PURCHASE | -2416
+18 | 2025-01-05 | 2025-05-01 | Achat marchandises (cabane) | 3433 | 3433 | PURCHASE | -3433
+19 | 2025-01-05 | 2025-05-01 | Achat marchandises (cabane) | 2644 | 2644 | PURCHASE | -2644
+20 | 2025-01-11 | 2025-11-01 | Achat marchandises (cabane) | 4990 | 4990 | PURCHASE | -4990
+21 | 2025-01-05 | 2025-05-01 | Achat marchandises (cabane) | 3140 | 3140 | PURCHASE | -3140
+22 | 2025-01-06 | 2025-06-01 | Achat marchandises (cabane) | 2374 | 2374 | PURCHASE | -2374
+23 | 2025-01-15 | 2025-01-15 | Achat marchandises (cabane) | 2572 | 2572 | PURCHASE | -2572
+24 | 2025-01-05 | 2025-05-01 | Facture électricité | 1258 | 1258 | PURCHASE | -1258
+25 | 2025-01-10 | 2025-10-01 | Honoraires divers | 3247 | 3247 | PURCHASE | -3247
+26 | 2025-01-15 | 2025-01-15 | Consommables atelier | 573 | 573 | PURCHASE | -573
+27 | 2025-01-20 | 2025-01-20 | Autres charges | 2905 | 2905 | PURCHASE | -2905
+28 | 2025-02-21 | 2025-02-21 | Vente cabane de jardin | 7241 | 7241 | SALE | 7241
+29 | 2025-02-05 | 2025-05-02 | Vente cabane de jardin | 15788 | 15788 | SALE | 15788
+30 | 2025-02-25 | 2025-02-25 | Vente cabane de jardin | 8336 | 8336 | SALE | 8336
+31 | 2025-02-10 | 2025-10-02 | Vente cabane de jardin | 6484 | 6484 | SALE | 6484
+32 | 2025-02-24 | 2025-02-24 | Vente cabane de jardin | 14479 | 14479 | SALE | 14479
+33 | 2025-02-02 | 2025-02-02 | Vente cabane de jardin | 14679 | 14679 | SALE | 14679
+34 | 2025-02-22 | 2025-02-22 | Vente cabane de jardin | 12900 | 12900 | SALE | 12900
+35 | 2025-02-13 | 2025-02-13 | Vente cabane de jardin | 10142 | 10142 | SALE | 10142
+36 | 2025-02-08 | 2025-08-02 | Vente cabane de jardin | 5079 | 5079 | SALE | 5079
+37 | 2025-02-22 | 2025-02-22 | Vente cabane de jardin | 10145 | 10145 | SALE | 10145
+38 | 2025-02-28 | 2025-02-28 | Vente cabane de jardin | 13140 | 13140 | SALE | 13140
+39 | 2025-02-21 | 2025-02-21 | Vente cabane de jardin | 12889 | 12889 | SALE | 12889
+40 | 2025-02-04 | 2025-04-02 | Vente cabane de jardin | 6254 | 6254 | SALE | 6254
+41 | 2025-02-11 | 2025-11-02 | Vente cabane de jardin | 5615 | 5615 | SALE | 5615
+42 | 2025-02-27 | 2025-02-27 | Vente cabane de jardin | 6830 | 6830 | SALE | 6830
+43 | 2025-02-08 | 2025-08-02 | Achat marchandises (cabane) | 1990 | 1990 | PURCHASE | -1990
+44 | 2025-02-11 | 2025-11-02 | Achat marchandises (cabane) | 4515 | 4515 | PURCHASE | -4515
+45 | 2025-02-25 | 2025-02-25 | Achat marchandises (cabane) | 2493 | 2493 | PURCHASE | -2493
+46 | 2025-02-24 | 2025-02-24 | Achat marchandises (cabane) | 2007 | 2007 | PURCHASE | -2007
+47 | 2025-02-21 | 2025-02-21 | Achat marchandises (cabane) | 4418 | 4418 | PURCHASE | -4418
+48 | 2025-02-17 | 2025-02-17 | Achat marchandises (cabane) | 3472 | 3472 | PURCHASE | -3472
+49 | 2025-02-15 | 2025-02-15 | Achat marchandises (cabane) | 1775 | 1775 | PURCHASE | -1775
+50 | 2025-02-04 | 2025-04-02 | Achat marchandises (cabane) | 2092 | 2092 | PURCHASE | -2092
+51 | 2025-02-08 | 2025-08-02 | Achat marchandises (cabane) | 4389 | 4389 | PURCHASE | -4389
+52 | 2025-02-09 | 2025-09-02 | Achat marchandises (cabane) | 2400 | 2400 | PURCHASE | -2400
+53 | 2025-02-11 | 2025-11-02 | Achat marchandises (cabane) | 3555 | 3555 | PURCHASE | -3555
+54 | 2025-02-05 | 2025-05-02 | Facture électricité | 1122 | 1122 | PURCHASE | -1122
+55 | 2025-02-10 | 2025-10-02 | Honoraires divers | 2370 | 2370 | PURCHASE | -2370
+56 | 2025-02-15 | 2025-02-15 | Consommables atelier | 1034 | 1034 | PURCHASE | -1034
+57 | 2025-02-20 | 2025-02-20 | Autres charges | 1807 | 1807 | PURCHASE | -1807
+58 | 2025-03-28 | 2025-03-28 | Vente cabane de jardin | 17435 | 17435 | SALE | 17435
+59 | 2025-03-07 | 2025-07-03 | Vente cabane de jardin | 26182 | 26182 | SALE | 26182
+60 | 2025-03-06 | 2025-06-03 | Vente cabane de jardin | 12595 | 12595 | SALE | 12595
+61 | 2025-03-07 | 2025-07-03 | Vente cabane de jardin | 16307 | 16307 | SALE | 16307
+62 | 2025-03-25 | 2025-03-25 | Vente cabane de jardin | 30119 | 30119 | SALE | 30119
+63 | 2025-03-02 | 2025-02-03 | Vente cabane de jardin | 10162 | 10162 | SALE | 10162
+64 | 2025-03-23 | 2025-03-23 | Vente cabane de jardin | 9910 | 9910 | SALE | 9910
+65 | 2025-03-17 | 2025-03-17 | Vente cabane de jardin | 19528 | 19528 | SALE | 19528
+66 | 2025-03-18 | 2025-03-18 | Vente cabane de jardin | 14723 | 14723 | SALE | 14723
+67 | 2025-03-18 | 2025-03-18 | Vente cabane de jardin | 27115 | 27115 | SALE | 27115
+68 | 2025-03-24 | 2025-03-24 | Vente cabane de jardin | 25204 | 25204 | SALE | 25204
+69 | 2025-03-21 | 2025-03-21 | Vente cabane de jardin | 13228 | 13228 | SALE | 13228
+70 | 2025-03-13 | 2025-03-13 | Vente cabane de jardin | 17489 | 17489 | SALE | 17489
+71 | 2025-03-17 | 2025-03-17 | Achat marchandises (cabane) | 3716 | 3716 | PURCHASE | -3716
+72 | 2025-03-27 | 2025-03-27 | Achat marchandises (cabane) | 3964 | 3964 | PURCHASE | -3964
+73 | 2025-03-16 | 2025-03-16 | Achat marchandises (cabane) | 3678 | 3678 | PURCHASE | -3678
+74 | 2025-03-15 | 2025-03-15 | Achat marchandises (cabane) | 2903 | 2903 | PURCHASE | -2903
+75 | 2025-03-24 | 2025-03-24 | Achat marchandises (cabane) | 4385 | 4385 | PURCHASE | -4385
+76 | 2025-03-02 | 2025-02-03 | Achat marchandises (cabane) | 1680 | 1680 | PURCHASE | -1680
+77 | 2025-03-28 | 2025-03-28 | Achat marchandises (cabane) | 3053 | 3053 | PURCHASE | -3053
+78 | 2025-03-05 | 2025-05-03 | Facture électricité | 1167 | 1167 | PURCHASE | -1167
+79 | 2025-03-10 | 2025-10-03 | Honoraires divers | 2201 | 2201 | PURCHASE | -2201
+80 | 2025-03-15 | 2025-03-15 | Consommables atelier | 1211 | 1211 | PURCHASE | -1211
+81 | 2025-03-20 | 2025-03-20 | Autres charges | 1444 | 1444 | PURCHASE | -1444
+82 | 2025-04-23 | 2025-04-23 | Vente cabane de jardin | 29895 | 29895 | SALE | 29895
+83 | 2025-04-13 | 2025-04-13 | Vente cabane de jardin | 16488 | 16488 | SALE | 16488
+84 | 2025-04-07 | 2025-07-04 | Vente cabane de jardin | 24610 | 24610 | SALE | 24610
+85 | 2025-04-07 | 2025-07-04 | Vente cabane de jardin | 21249 | 21249 | SALE | 21249
+86 | 2025-04-17 | 2025-04-17 | Vente cabane de jardin | 29299 | 29299 | SALE | 29299
+87 | 2025-04-22 | 2025-04-22 | Vente cabane de jardin | 31354 | 31354 | SALE | 31354
+88 | 2025-04-27 | 2025-04-27 | Vente cabane de jardin | 31092 | 31092 | SALE | 31092
+89 | 2025-04-11 | 2025-11-04 | Vente cabane de jardin | 21362 | 21362 | SALE | 21362
+90 | 2025-04-15 | 2025-04-15 | Vente cabane de jardin | 20743 | 20743 | SALE | 20743
+91 | 2025-04-26 | 2025-04-26 | Vente cabane de jardin | 13190 | 13190 | SALE | 13190
+92 | 2025-04-26 | 2025-04-26 | Vente cabane de jardin | 22844 | 22844 | SALE | 22844
+93 | 2025-04-25 | 2025-04-25 | Vente cabane de jardin | 18796 | 18796 | SALE | 18796
+94 | 2025-04-08 | 2025-08-04 | Vente cabane de jardin | 26087 | 26087 | SALE | 26087
+95 | 2025-04-18 | 2025-04-18 | Vente cabane de jardin | 25116 | 25116 | SALE | 25116
+96 | 2025-04-16 | 2025-04-16 | Vente cabane de jardin | 27872 | 27872 | SALE | 27872
+97 | 2025-04-15 | 2025-04-15 | Achat marchandises (cabane) | 3103 | 3103 | PURCHASE | -3103
+98 | 2025-04-06 | 2025-06-04 | Achat marchandises (cabane) | 3563 | 3563 | PURCHASE | -3563
+99 | 2025-04-02 | 2025-02-04 | Achat marchandises (cabane) | 4338 | 4338 | PURCHASE | -4338
+100 | 2025-04-15 | 2025-04-15 | Achat marchandises (cabane) | 3607 | 3607 | PURCHASE | -3607
+101 | 2025-04-25 | 2025-04-25 | Achat marchandises (cabane) | 3581 | 3581 | PURCHASE | -3581
+102 | 2025-04-02 | 2025-02-04 | Achat marchandises (cabane) | 3746 | 3746 | PURCHASE | -3746
+103 | 2025-04-17 | 2025-04-17 | Achat marchandises (cabane) | 2075 | 2075 | PURCHASE | -2075
+104 | 2025-04-02 | 2025-02-04 | Achat marchandises (cabane) | 3794 | 3794 | PURCHASE | -3794
+105 | 2025-04-25 | 2025-04-25 | Achat marchandises (cabane) | 1714 | 1714 | PURCHASE | -1714
+106 | 2025-04-27 | 2025-04-27 | Achat marchandises (cabane) | 4998 | 4998 | PURCHASE | -4998
+107 | 2025-04-05 | 2025-05-04 | Facture électricité | 1206 | 1206 | PURCHASE | -1206
+108 | 2025-04-10 | 2025-10-04 | Honoraires divers | 2138 | 2138 | PURCHASE | -2138
+109 | 2025-04-15 | 2025-04-15 | Consommables atelier | 691 | 691 | PURCHASE | -691
+110 | 2025-04-20 | 2025-04-20 | Autres charges | 1411 | 1411 | PURCHASE | -1411
+111 | 2025-05-03 | 2025-03-05 | Vente cabane de jardin | 16640 | 16640 | SALE | 16640
+112 | 2025-05-10 | 2025-10-05 | Vente cabane de jardin | 38387 | 38387 | SALE | 38387
+113 | 2025-05-11 | 2025-11-05 | Vente cabane de jardin | 21229 | 21229 | SALE | 21229
+114 | 2025-05-20 | 2025-05-20 | Vente cabane de jardin | 14641 | 14641 | SALE | 14641
+115 | 2025-05-22 | 2025-05-22 | Vente cabane de jardin | 31860 | 31860 | SALE | 31860
+116 | 2025-05-24 | 2025-05-24 | Vente cabane de jardin | 18183 | 18183 | SALE | 18183
+117 | 2025-05-10 | 2025-10-05 | Vente cabane de jardin | 18579 | 18579 | SALE | 18579
+118 | 2025-05-02 | 2025-02-05 | Vente cabane de jardin | 33319 | 33319 | SALE | 33319
+119 | 2025-05-26 | 2025-05-26 | Vente cabane de jardin | 34933 | 34933 | SALE | 34933
+120 | 2025-05-22 | 2025-05-22 | Vente cabane de jardin | 32405 | 32405 | SALE | 32405
+121 | 2025-05-10 | 2025-10-05 | Vente cabane de jardin | 23184 | 23184 | SALE | 23184
+122 | 2025-05-08 | 2025-08-05 | Vente cabane de jardin | 34146 | 34146 | SALE | 34146
+123 | 2025-05-14 | 2025-05-14 | Vente cabane de jardin | 28643 | 28643 | SALE | 28643
+124 | 2025-05-17 | 2025-05-17 | Vente cabane de jardin | 28803 | 28803 | SALE | 28803
+125 | 2025-05-23 | 2025-05-23 | Vente cabane de jardin | 15049 | 15049 | SALE | 15049
+126 | 2025-05-09 | 2025-09-05 | Achat marchandises (cabane) | 2121 | 2121 | PURCHASE | -2121
+127 | 2025-05-09 | 2025-09-05 | Achat marchandises (cabane) | 2642 | 2642 | PURCHASE | -2642
+128 | 2025-05-11 | 2025-11-05 | Achat marchandises (cabane) | 3042 | 3042 | PURCHASE | -3042
+129 | 2025-05-26 | 2025-05-26 | Achat marchandises (cabane) | 3748 | 3748 | PURCHASE | -3748
+130 | 2025-05-14 | 2025-05-14 | Achat marchandises (cabane) | 2756 | 2756 | PURCHASE | -2756
+131 | 2025-05-12 | 2025-12-05 | Achat marchandises (cabane) | 1842 | 1842 | PURCHASE | -1842
+132 | 2025-05-05 | 2025-05-05 | Facture électricité | 1397 | 1397 | PURCHASE | -1397
+133 | 2025-05-10 | 2025-10-05 | Honoraires divers | 3431 | 3431 | PURCHASE | -3431
+134 | 2025-05-15 | 2025-05-15 | Consommables atelier | 963 | 963 | PURCHASE | -963
+135 | 2025-05-20 | 2025-05-20 | Autres charges | 2349 | 2349 | PURCHASE | -2349
+136 | 2025-06-04 | 2025-04-06 | Vente cabane de jardin | 32044 | 32044 | SALE | 32044
+137 | 2025-06-16 | 2025-06-16 | Vente cabane de jardin | 30751 | 30751 | SALE | 30751
+138 | 2025-06-11 | 2025-11-06 | Vente cabane de jardin | 27862 | 27862 | SALE | 27862
+139 | 2025-06-25 | 2025-06-25 | Vente cabane de jardin | 27743 | 27743 | SALE | 27743
+140 | 2025-06-27 | 2025-06-27 | Vente cabane de jardin | 42104 | 42104 | SALE | 42104
+141 | 2025-06-23 | 2025-06-23 | Vente cabane de jardin | 38349 | 38349 | SALE | 38349
+142 | 2025-06-23 | 2025-06-23 | Vente cabane de jardin | 43372 | 43372 | SALE | 43372
+143 | 2025-06-22 | 2025-06-22 | Vente cabane de jardin | 42204 | 42204 | SALE | 42204
+144 | 2025-06-26 | 2025-06-26 | Vente cabane de jardin | 39372 | 39372 | SALE | 39372
+145 | 2025-06-20 | 2025-06-20 | Vente cabane de jardin | 25187 | 25187 | SALE | 25187
+146 | 2025-06-04 | 2025-04-06 | Vente cabane de jardin | 22694 | 22694 | SALE | 22694
+147 | 2025-06-23 | 2025-06-23 | Vente cabane de jardin | 18317 | 18317 | SALE | 18317
+148 | 2025-06-20 | 2025-06-20 | Achat marchandises (cabane) | 2805 | 2805 | PURCHASE | -2805
+149 | 2025-06-09 | 2025-09-06 | Achat marchandises (cabane) | 2552 | 2552 | PURCHASE | -2552
+150 | 2025-06-13 | 2025-06-13 | Achat marchandises (cabane) | 1714 | 1714 | PURCHASE | -1714
+151 | 2025-06-17 | 2025-06-17 | Achat marchandises (cabane) | 1560 | 1560 | PURCHASE | -1560
+152 | 2025-06-21 | 2025-06-21 | Achat marchandises (cabane) | 1697 | 1697 | PURCHASE | -1697
+153 | 2025-06-17 | 2025-06-17 | Achat marchandises (cabane) | 4044 | 4044 | PURCHASE | -4044
+154 | 2025-06-21 | 2025-06-21 | Achat marchandises (cabane) | 2911 | 2911 | PURCHASE | -2911
+155 | 2025-06-13 | 2025-06-13 | Achat marchandises (cabane) | 4324 | 4324 | PURCHASE | -4324
+156 | 2025-06-05 | 2025-05-06 | Facture électricité | 1460 | 1460 | PURCHASE | -1460
+157 | 2025-06-10 | 2025-10-06 | Honoraires divers | 2367 | 2367 | PURCHASE | -2367
+158 | 2025-06-15 | 2025-06-15 | Consommables atelier | 1345 | 1345 | PURCHASE | -1345
+159 | 2025-06-20 | 2025-06-20 | Autres charges | 2680 | 2680 | PURCHASE | -2680
+160 | 2025-07-19 | 2025-07-19 | Vente cabane de jardin | 13271 | 13271 | SALE | 13271
+161 | 2025-07-12 | 2025-12-07 | Vente cabane de jardin | 30935 | 30935 | SALE | 30935
+162 | 2025-07-26 | 2025-07-26 | Vente cabane de jardin | 18932 | 18932 | SALE | 18932
+163 | 2025-07-20 | 2025-07-20 | Vente cabane de jardin | 14602 | 14602 | SALE | 14602
+164 | 2025-07-16 | 2025-07-16 | Vente cabane de jardin | 25719 | 25719 | SALE | 25719
+165 | 2025-07-08 | 2025-08-07 | Vente cabane de jardin | 22947 | 22947 | SALE | 22947
+166 | 2025-07-02 | 2025-02-07 | Vente cabane de jardin | 22092 | 22092 | SALE | 22092
+167 | 2025-07-19 | 2025-07-19 | Vente cabane de jardin | 9871 | 9871 | SALE | 9871
+168 | 2025-07-02 | 2025-02-07 | Vente cabane de jardin | 27624 | 27624 | SALE | 27624
+169 | 2025-07-06 | 2025-06-07 | Vente cabane de jardin | 16863 | 16863 | SALE | 16863
+170 | 2025-07-15 | 2025-07-15 | Vente cabane de jardin | 29778 | 29778 | SALE | 29778
+171 | 2025-07-09 | 2025-09-07 | Vente cabane de jardin | 20308 | 20308 | SALE | 20308
+172 | 2025-07-22 | 2025-07-22 | Vente cabane de jardin | 8923 | 8923 | SALE | 8923
+173 | 2025-07-03 | 2025-03-07 | Vente cabane de jardin | 18794 | 18794 | SALE | 18794
+174 | 2025-07-03 | 2025-03-07 | Vente cabane de jardin | 15470 | 15470 | SALE | 15470
+175 | 2025-07-12 | 2025-12-07 | Vente cabane de jardin | 27811 | 27811 | SALE | 27811
+176 | 2025-07-03 | 2025-03-07 | Vente cabane de jardin | 22159 | 22159 | SALE | 22159
+177 | 2025-07-02 | 2025-02-07 | Vente cabane de jardin | 13899 | 13899 | SALE | 13899
+178 | 2025-07-05 | 2025-05-07 | Achat marchandises (cabane) | 3206 | 3206 | PURCHASE | -3206
+179 | 2025-07-12 | 2025-12-07 | Achat marchandises (cabane) | 3974 | 3974 | PURCHASE | -3974
+180 | 2025-07-13 | 2025-07-13 | Achat marchandises (cabane) | 3329 | 3329 | PURCHASE | -3329
+181 | 2025-07-26 | 2025-07-26 | Achat marchandises (cabane) | 3789 | 3789 | PURCHASE | -3789
+182 | 2025-07-28 | 2025-07-28 | Achat marchandises (cabane) | 4783 | 4783 | PURCHASE | -4783
+183 | 2025-07-05 | 2025-05-07 | Facture électricité | 977 | 977 | PURCHASE | -977
+184 | 2025-07-10 | 2025-10-07 | Honoraires divers | 2025 | 2025 | PURCHASE | -2025
+185 | 2025-07-15 | 2025-07-15 | Consommables atelier | 983 | 983 | PURCHASE | -983
+186 | 2025-07-20 | 2025-07-20 | Autres charges | 1129 | 1129 | PURCHASE | -1129
+187 | 2025-08-16 | 2025-08-16 | Vente cabane de jardin | 24192 | 24192 | SALE | 24192
+188 | 2025-08-28 | 2025-08-28 | Vente cabane de jardin | 19159 | 19159 | SALE | 19159
+189 | 2025-08-08 | 2025-08-08 | Vente cabane de jardin | 21204 | 21204 | SALE | 21204
+190 | 2025-08-06 | 2025-06-08 | Vente cabane de jardin | 17218 | 17218 | SALE | 17218
+191 | 2025-08-20 | 2025-08-20 | Vente cabane de jardin | 9779 | 9779 | SALE | 9779
+192 | 2025-08-27 | 2025-08-27 | Vente cabane de jardin | 20473 | 20473 | SALE | 20473
+193 | 2025-08-16 | 2025-08-16 | Vente cabane de jardin | 12608 | 12608 | SALE | 12608
+194 | 2025-08-09 | 2025-09-08 | Vente cabane de jardin | 10590 | 10590 | SALE | 10590
+195 | 2025-08-26 | 2025-08-26 | Vente cabane de jardin | 16902 | 16902 | SALE | 16902
+196 | 2025-08-06 | 2025-06-08 | Vente cabane de jardin | 18492 | 18492 | SALE | 18492
+197 | 2025-08-27 | 2025-08-27 | Vente cabane de jardin | 13682 | 13682 | SALE | 13682
+198 | 2025-08-21 | 2025-08-21 | Vente cabane de jardin | 20905 | 20905 | SALE | 20905
+199 | 2025-08-22 | 2025-08-22 | Vente cabane de jardin | 16147 | 16147 | SALE | 16147
+200 | 2025-08-18 | 2025-08-18 | Vente cabane de jardin | 21052 | 21052 | SALE | 21052
+201 | 2025-08-19 | 2025-08-19 | Vente cabane de jardin | 26513 | 26513 | SALE | 26513
+202 | 2025-08-25 | 2025-08-25 | Vente cabane de jardin | 10023 | 10023 | SALE | 10023
+203 | 2025-08-18 | 2025-08-18 | Vente cabane de jardin | 21060 | 21060 | SALE | 21060
+204 | 2025-08-01 | 2025-01-08 | Achat marchandises (cabane) | 3814 | 3814 | PURCHASE | -3814
+205 | 2025-08-25 | 2025-08-25 | Achat marchandises (cabane) | 2051 | 2051 | PURCHASE | -2051
+206 | 2025-08-10 | 2025-10-08 | Achat marchandises (cabane) | 4185 | 4185 | PURCHASE | -4185
+207 | 2025-08-26 | 2025-08-26 | Achat marchandises (cabane) | 3014 | 3014 | PURCHASE | -3014
+208 | 2025-08-20 | 2025-08-20 | Achat marchandises (cabane) | 3529 | 3529 | PURCHASE | -3529
+209 | 2025-08-01 | 2025-01-08 | Achat marchandises (cabane) | 2626 | 2626 | PURCHASE | -2626
+210 | 2025-08-13 | 2025-08-13 | Achat marchandises (cabane) | 3244 | 3244 | PURCHASE | -3244
+211 | 2025-08-26 | 2025-08-26 | Achat marchandises (cabane) | 2377 | 2377 | PURCHASE | -2377
+212 | 2025-08-05 | 2025-05-08 | Facture électricité | 1293 | 1293 | PURCHASE | -1293
+213 | 2025-08-10 | 2025-10-08 | Honoraires divers | 2762 | 2762 | PURCHASE | -2762
+214 | 2025-08-15 | 2025-08-15 | Consommables atelier | 531 | 531 | PURCHASE | -531
+215 | 2025-08-20 | 2025-08-20 | Autres charges | 2728 | 2728 | PURCHASE | -2728
+216 | 2025-09-25 | 2025-09-25 | Vente cabane de jardin | 28017 | 28017 | SALE | 28017
+217 | 2025-09-23 | 2025-09-23 | Vente cabane de jardin | 11325 | 11325 | SALE | 11325
+218 | 2025-09-12 | 2025-12-09 | Vente cabane de jardin | 23699 | 23699 | SALE | 23699
+219 | 2025-09-24 | 2025-09-24 | Vente cabane de jardin | 27034 | 27034 | SALE | 27034
+220 | 2025-09-25 | 2025-09-25 | Vente cabane de jardin | 20799 | 20799 | SALE | 20799
+221 | 2025-09-17 | 2025-09-17 | Vente cabane de jardin | 11532 | 11532 | SALE | 11532
+222 | 2025-09-03 | 2025-03-09 | Vente cabane de jardin | 22181 | 22181 | SALE | 22181
+223 | 2025-09-10 | 2025-10-09 | Vente cabane de jardin | 22176 | 22176 | SALE | 22176
+224 | 2025-09-13 | 2025-09-13 | Vente cabane de jardin | 29687 | 29687 | SALE | 29687
+225 | 2025-09-23 | 2025-09-23 | Vente cabane de jardin | 23760 | 23760 | SALE | 23760
+226 | 2025-09-17 | 2025-09-17 | Vente cabane de jardin | 19790 | 19790 | SALE | 19790
+227 | 2025-09-18 | 2025-09-18 | Achat marchandises (cabane) | 2081 | 2081 | PURCHASE | -2081
+228 | 2025-09-01 | 2025-01-09 | Achat marchandises (cabane) | 1724 | 1724 | PURCHASE | -1724
+229 | 2025-09-03 | 2025-03-09 | Achat marchandises (cabane) | 2498 | 2498 | PURCHASE | -2498
+230 | 2025-09-05 | 2025-05-09 | Achat marchandises (cabane) | 2371 | 2371 | PURCHASE | -2371
+231 | 2025-09-05 | 2025-05-09 | Achat marchandises (cabane) | 3354 | 3354 | PURCHASE | -3354
+232 | 2025-09-17 | 2025-09-17 | Achat marchandises (cabane) | 2211 | 2211 | PURCHASE | -2211
+233 | 2025-09-06 | 2025-06-09 | Achat marchandises (cabane) | 4083 | 4083 | PURCHASE | -4083
+234 | 2025-09-13 | 2025-09-13 | Achat marchandises (cabane) | 4314 | 4314 | PURCHASE | -4314
+235 | 2025-09-26 | 2025-09-26 | Achat marchandises (cabane) | 4610 | 4610 | PURCHASE | -4610
+236 | 2025-09-06 | 2025-06-09 | Achat marchandises (cabane) | 2685 | 2685 | PURCHASE | -2685
+237 | 2025-09-23 | 2025-09-23 | Achat marchandises (cabane) | 3513 | 3513 | PURCHASE | -3513
+238 | 2025-09-09 | 2025-09-09 | Achat marchandises (cabane) | 3530 | 3530 | PURCHASE | -3530
+239 | 2025-09-05 | 2025-05-09 | Facture électricité | 1306 | 1306 | PURCHASE | -1306
+240 | 2025-09-10 | 2025-10-09 | Honoraires divers | 2686 | 2686 | PURCHASE | -2686
+241 | 2025-09-15 | 2025-09-15 | Consommables atelier | 707 | 707 | PURCHASE | -707
+242 | 2025-09-20 | 2025-09-20 | Autres charges | 2824 | 2824 | PURCHASE | -2824
+243 | 2025-10-16 | 2025-10-16 | Vente cabane de jardin | 7309 | 7309 | SALE | 7309
+244 | 2025-10-21 | 2025-10-21 | Vente cabane de jardin | 7602 | 7602 | SALE | 7602
+245 | 2025-10-25 | 2025-10-25 | Vente cabane de jardin | 18662 | 18662 | SALE | 18662
+246 | 2025-10-15 | 2025-10-15 | Vente cabane de jardin | 18431 | 18431 | SALE | 18431
+247 | 2025-10-14 | 2025-10-14 | Vente cabane de jardin | 6182 | 6182 | SALE | 6182
+248 | 2025-10-10 | 2025-10-10 | Vente cabane de jardin | 6578 | 6578 | SALE | 6578
+249 | 2025-10-17 | 2025-10-17 | Vente cabane de jardin | 6085 | 6085 | SALE | 6085
+250 | 2025-10-20 | 2025-10-20 | Vente cabane de jardin | 16223 | 16223 | SALE | 16223
+251 | 2025-10-06 | 2025-06-10 | Vente cabane de jardin | 13915 | 13915 | SALE | 13915
+252 | 2025-10-07 | 2025-07-10 | Vente cabane de jardin | 15727 | 15727 | SALE | 15727
+253 | 2025-10-14 | 2025-10-14 | Vente cabane de jardin | 19969 | 19969 | SALE | 19969
+254 | 2025-10-13 | 2025-10-13 | Vente cabane de jardin | 17379 | 17379 | SALE | 17379
+255 | 2025-10-28 | 2025-10-28 | Vente cabane de jardin | 18854 | 18854 | SALE | 18854
+256 | 2025-10-06 | 2025-06-10 | Vente cabane de jardin | 7083 | 7083 | SALE | 7083
+257 | 2025-10-12 | 2025-12-10 | Achat marchandises (cabane) | 4654 | 4654 | PURCHASE | -4654
+258 | 2025-10-23 | 2025-10-23 | Achat marchandises (cabane) | 2599 | 2599 | PURCHASE | -2599
+259 | 2025-10-05 | 2025-05-10 | Achat marchandises (cabane) | 4882 | 4882 | PURCHASE | -4882
+260 | 2025-10-19 | 2025-10-19 | Achat marchandises (cabane) | 2073 | 2073 | PURCHASE | -2073
+261 | 2025-10-17 | 2025-10-17 | Achat marchandises (cabane) | 4596 | 4596 | PURCHASE | -4596
+262 | 2025-10-27 | 2025-10-27 | Achat marchandises (cabane) | 2576 | 2576 | PURCHASE | -2576
+263 | 2025-10-27 | 2025-10-27 | Achat marchandises (cabane) | 2817 | 2817 | PURCHASE | -2817
+264 | 2025-10-14 | 2025-10-14 | Achat marchandises (cabane) | 3831 | 3831 | PURCHASE | -3831
+265 | 2025-10-05 | 2025-05-10 | Facture électricité | 831 | 831 | PURCHASE | -831
+266 | 2025-10-10 | 2025-10-10 | Honoraires divers | 2050 | 2050 | PURCHASE | -2050
+267 | 2025-10-15 | 2025-10-15 | Consommables atelier | 1040 | 1040 | PURCHASE | -1040
+268 | 2025-10-20 | 2025-10-20 | Autres charges | 1820 | 1820 | PURCHASE | -1820
+269 | 2025-11-09 | 2025-09-11 | Vente cabane de jardin | 9863 | 9863 | SALE | 9863
+270 | 2025-11-20 | 2025-11-20 | Vente cabane de jardin | 8815 | 8815 | SALE | 8815
+271 | 2025-11-21 | 2025-11-21 | Vente cabane de jardin | 7587 | 7587 | SALE | 7587
+272 | 2025-11-14 | 2025-11-14 | Vente cabane de jardin | 4623 | 4623 | SALE | 4623
+273 | 2025-11-17 | 2025-11-17 | Vente cabane de jardin | 7126 | 7126 | SALE | 7126
+274 | 2025-11-06 | 2025-06-11 | Vente cabane de jardin | 11164 | 11164 | SALE | 11164
+275 | 2025-11-18 | 2025-11-18 | Vente cabane de jardin | 4256 | 4256 | SALE | 4256
+276 | 2025-11-11 | 2025-11-11 | Vente cabane de jardin | 10158 | 10158 | SALE | 10158
+277 | 2025-11-15 | 2025-11-15 | Vente cabane de jardin | 11000 | 11000 | SALE | 11000
+278 | 2025-11-19 | 2025-11-19 | Vente cabane de jardin | 5815 | 5815 | SALE | 5815
+279 | 2025-11-24 | 2025-11-24 | Vente cabane de jardin | 10448 | 10448 | SALE | 10448
+280 | 2025-11-15 | 2025-11-15 | Vente cabane de jardin | 5072 | 5072 | SALE | 5072
+281 | 2025-11-09 | 2025-09-11 | Vente cabane de jardin | 5001 | 5001 | SALE | 5001
+282 | 2025-11-23 | 2025-11-23 | Vente cabane de jardin | 8078 | 8078 | SALE | 8078
+283 | 2025-11-01 | 2025-01-11 | Vente cabane de jardin | 6209 | 6209 | SALE | 6209
+284 | 2025-11-05 | 2025-05-11 | Vente cabane de jardin | 4785 | 4785 | SALE | 4785
+285 | 2025-11-19 | 2025-11-19 | Achat marchandises (cabane) | 1935 | 1935 | PURCHASE | -1935
+286 | 2025-11-28 | 2025-11-28 | Achat marchandises (cabane) | 3523 | 3523 | PURCHASE | -3523
+287 | 2025-11-19 | 2025-11-19 | Achat marchandises (cabane) | 4982 | 4982 | PURCHASE | -4982
+288 | 2025-11-20 | 2025-11-20 | Achat marchandises (cabane) | 2063 | 2063 | PURCHASE | -2063
+289 | 2025-11-15 | 2025-11-15 | Achat marchandises (cabane) | 4109 | 4109 | PURCHASE | -4109
+290 | 2025-11-18 | 2025-11-18 | Achat marchandises (cabane) | 2121 | 2121 | PURCHASE | -2121
+291 | 2025-11-21 | 2025-11-21 | Achat marchandises (cabane) | 3549 | 3549 | PURCHASE | -3549
+292 | 2025-11-03 | 2025-03-11 | Achat marchandises (cabane) | 2879 | 2879 | PURCHASE | -2879
+293 | 2025-11-05 | 2025-05-11 | Facture électricité | 1277 | 1277 | PURCHASE | -1277
+294 | 2025-11-10 | 2025-10-11 | Honoraires divers | 2803 | 2803 | PURCHASE | -2803
+295 | 2025-11-15 | 2025-11-15 | Consommables atelier | 1433 | 1433 | PURCHASE | -1433
+296 | 2025-11-20 | 2025-11-20 | Autres charges | 1064 | 1064 | PURCHASE | -1064
+297 | 2025-12-20 | 2025-12-20 | Vente cabane de jardin | 8015 | 8015 | SALE | 8015
+298 | 2025-12-05 | 2025-05-12 | Vente cabane de jardin | 11601 | 11601 | SALE | 11601
+299 | 2025-12-25 | 2025-12-25 | Vente cabane de jardin | 9949 | 9949 | SALE | 9949
+300 | 2025-12-19 | 2025-12-19 | Vente cabane de jardin | 7887 | 7887 | SALE | 7887
+301 | 2025-12-27 | 2025-12-27 | Vente cabane de jardin | 7789 | 7789 | SALE | 7789
+302 | 2025-12-24 | 2025-12-24 | Vente cabane de jardin | 9957 | 9957 | SALE | 9957
+303 | 2025-12-05 | 2025-05-12 | Vente cabane de jardin | 6285 | 6285 | SALE | 6285
+304 | 2025-12-12 | 2025-12-12 | Vente cabane de jardin | 10569 | 10569 | SALE | 10569
+305 | 2025-12-01 | 2025-01-12 | Vente cabane de jardin | 7537 | 7537 | SALE | 7537
+306 | 2025-12-27 | 2025-12-27 | Vente cabane de jardin | 8428 | 8428 | SALE | 8428
+307 | 2025-12-25 | 2025-12-25 | Vente cabane de jardin | 11367 | 11367 | SALE | 11367
+308 | 2025-12-19 | 2025-12-19 | Vente cabane de jardin | 7191 | 7191 | SALE | 7191
+309 | 2025-12-27 | 2025-12-27 | Vente cabane de jardin | 4738 | 4738 | SALE | 4738
+310 | 2025-12-01 | 2025-01-12 | Vente cabane de jardin | 8685 | 8685 | SALE | 8685
+311 | 2025-12-23 | 2025-12-23 | Achat marchandises (cabane) | 1582 | 1582 | PURCHASE | -1582
+312 | 2025-12-17 | 2025-12-17 | Achat marchandises (cabane) | 2986 | 2986 | PURCHASE | -2986
+313 | 2025-12-01 | 2025-01-12 | Achat marchandises (cabane) | 3787 | 3787 | PURCHASE | -3787
+314 | 2025-12-03 | 2025-03-12 | Achat marchandises (cabane) | 3304 | 3304 | PURCHASE | -3304
+315 | 2025-12-20 | 2025-12-20 | Achat marchandises (cabane) | 3674 | 3674 | PURCHASE | -3674
+316 | 2025-12-10 | 2025-10-12 | Achat marchandises (cabane) | 2957 | 2957 | PURCHASE | -2957
+317 | 2025-12-12 | 2025-12-12 | Achat marchandises (cabane) | 3297 | 3297 | PURCHASE | -3297
+318 | 2025-12-11 | 2025-11-12 | Achat marchandises (cabane) | 2447 | 2447 | PURCHASE | -2447
+319 | 2025-12-08 | 2025-08-12 | Achat marchandises (cabane) | 2656 | 2656 | PURCHASE | -2656
+320 | 2025-12-10 | 2025-10-12 | Achat marchandises (cabane) | 2497 | 2497 | PURCHASE | -2497
+321 | 2025-12-01 | 2025-01-12 | Achat marchandises (cabane) | 4216 | 4216 | PURCHASE | -4216
+322 | 2025-12-22 | 2025-12-22 | Achat marchandises (cabane) | 2630 | 2630 | PURCHASE | -2630
+323 | 2025-12-05 | 2025-05-12 | Facture électricité | 1081 | 1081 | PURCHASE | -1081
+324 | 2025-12-10 | 2025-10-12 | Honoraires divers | 3860 | 3860 | PURCHASE | -3860
+325 | 2025-12-15 | 2025-12-15 | Consommables atelier | 1021 | 1021 | PURCHASE | -1021
+326 | 2025-12-20 | 2025-12-20 | Autres charges | 2247 | 2247 | PURCHASE | -2247

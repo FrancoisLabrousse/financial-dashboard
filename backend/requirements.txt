@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+flask-cors
+pandas
+psycopg2-binary
+openpyxl
+python-dotenv
+gunicorn
+xlrd

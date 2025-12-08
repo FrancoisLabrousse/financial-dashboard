@@ -1,0 +1,33 @@
+Analyzing c:\Users\zaxod\OneDrive\Documents\APPS\financial-dashboard\backend\uploads\PME_Cabanes_Detaille.xlsx...
+Columns found: ['Date', 'Type', 'Description', 'Montant (€)', 'Catégorie', 'Mois']
+Mapped columns: {'date': 'date', 'amount': 'montant (€)', 'description': 'description', 'category': 'catégorie'}
+
+--- January Transactions ---
+Row 2: 2025-01-28 | Vente cabane de jardin | Orig: 7243 | Type: SALE | Final: 7243
+Row 3: 2025-01-22 | Vente cabane de jardin | Orig: 9464 | Type: SALE | Final: 9464
+Row 6: 2025-01-28 | Vente cabane de jardin | Orig: 11781 | Type: SALE | Final: 11781
+Row 7: 2025-01-20 | Vente cabane de jardin | Orig: 8353 | Type: SALE | Final: 8353
+Row 8: 2025-01-21 | Vente cabane de jardin | Orig: 13694 | Type: SALE | Final: 13694
+Row 9: 2025-01-01 | Vente cabane de jardin | Orig: 4472 | Type: SALE | Final: 4472
+Row 10: 2025-01-25 | Vente cabane de jardin | Orig: 5749 | Type: SALE | Final: 5749
+Row 12: 2025-01-17 | Vente cabane de jardin | Orig: 14668 | Type: SALE | Final: 14668
+Row 13: 2025-01-22 | Vente cabane de jardin | Orig: 8163 | Type: SALE | Final: 8163
+Row 14: 2025-01-23 | Vente cabane de jardin | Orig: 13018 | Type: SALE | Final: 13018
+Row 15: 2025-01-15 | Vente cabane de jardin | Orig: 4729 | Type: SALE | Final: 4729
+Row 16: 2025-01-23 | Vente cabane de jardin | Orig: 11041 | Type: SALE | Final: 11041
+Row 17: 2025-01-28 | Achat marchandises (cabane) | Orig: 2416 | Type: PURCHASE | Final: -2416
+Row 23: 2025-01-15 | Achat marchandises (cabane) | Orig: 2572 | Type: PURCHASE | Final: -2572
+Row 26: 2025-01-15 | Consommables atelier | Orig: 573 | Type: PURCHASE | Final: -573
+Row 27: 2025-01-20 | Autres charges | Orig: 2905 | Type: PURCHASE | Final: -2905
+Row 204: 2025-01-08 | Achat marchandises (cabane) | Orig: 3814 | Type: PURCHASE | Final: -3814
+Row 209: 2025-01-08 | Achat marchandises (cabane) | Orig: 2626 | Type: PURCHASE | Final: -2626
+Row 228: 2025-01-09 | Achat marchandises (cabane) | Orig: 1724 | Type: PURCHASE | Final: -1724
+Row 283: 2025-01-11 | Vente cabane de jardin | Orig: 6209 | Type: SALE | Final: 6209
+Row 305: 2025-01-12 | Vente cabane de jardin | Orig: 7537 | Type: SALE | Final: 7537
+Row 310: 2025-01-12 | Vente cabane de jardin | Orig: 8685 | Type: SALE | Final: 8685
+Row 313: 2025-01-12 | Achat marchandises (cabane) | Orig: 3787 | Type: PURCHASE | Final: -3787
+Row 321: 2025-01-12 | Achat marchandises (cabane) | Orig: 4216 | Type: PURCHASE | Final: -4216
+
+--- January Summary ---
+Jan Income: 134,806.00
+Jan Expense: -24,633.00
