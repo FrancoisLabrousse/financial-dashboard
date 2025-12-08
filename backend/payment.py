@@ -1,4 +1,5 @@
 import stripe
+import os
 from flask import Blueprint, request, jsonify, current_app, redirect
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import db, User
@@ -26,8 +27,8 @@ def create_checkout_session():
                 },
             ],
             mode='subscription',
-            success_url='http://localhost:5173/payment/success?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url='http://localhost:5173/payment/cancel',
+            success_url=f"{os.environ.get('FRONTEND_URL', 'http://localhost:5173')}/payment/success?session_id={{CHECKOUT_SESSION_ID}}",
+            cancel_url=f"{os.environ.get('FRONTEND_URL', 'http://localhost:5173')}/payment/cancel",
             metadata={
                 'user_id': user.id
             }
