@@ -9,8 +9,17 @@ def format_date_sql(date_col, fmt):
     fmt: SQLite format string (e.g. '%Y-%m')
     """
     # Check dialect name
-    # Note: We need to access the dialect from the session bind or engine
-    dialect_name = db.session.bind.dialect.name if db.session.bind else 'sqlite'
+    # Check dialect name
+    try:
+        dialect_name = db.engine.name
+    except:
+        # Fallback if engine not accessible
+        from flask import current_app
+        uri = current_app.config.get('SQLALCHEMY_DATABASE_URI', '')
+        if 'postgres' in uri:
+            dialect_name = 'postgresql'
+        else:
+            dialect_name = 'sqlite'
     
     if dialect_name == 'sqlite':
         return func.strftime(fmt, date_col)
