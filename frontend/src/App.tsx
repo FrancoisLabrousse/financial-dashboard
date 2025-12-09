@@ -1,12 +1,37 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import History from './pages/History';
+import AdminDashboard from './pages/AdminDashboard';
+import Subscription from './pages/Subscription';
+import PaymentResult from './pages/PaymentResult';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import LandingPage from './pages/LandingPage';
 
+const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const { user, loading } = useAuth();
+
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">Chargement...</div>;
+    }
+
+    return user ? <>{children}</> : <Navigate to="/login" />;
+};
+
+const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const { user, loading } = useAuth();
+
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">Chargement...</div>;
+    }
+
+    return user && user.is_admin ? <>{children}</> : <Navigate to="/dashboard" />;
+};
+
 function App() {
-    const { user } = useAuth(); // Need to access user state in App to condition root route
-
-    // Note: useAuth needs to be inside AuthProvider. 
-    // We need to refactor App structure or use a wrapper component.
-    // Let's create a wrapper for the root route.
-
     return (
         <AuthProvider>
             <Router>

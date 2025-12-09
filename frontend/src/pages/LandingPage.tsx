@@ -2,13 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     TrendingUp,
-    PieChart,
     Shield,
     Zap,
     CheckCircle,
     ArrowRight,
-    BarChart3,
-    Lock
+    BarChart3
 } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
