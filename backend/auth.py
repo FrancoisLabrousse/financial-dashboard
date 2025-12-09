@@ -23,12 +23,15 @@ def register():
     db.session.add(new_user)
     db.session.commit()
 
-    # Send welcome email
+    # Send welcome email asynchronously
     try:
         from services.email import send_welcome_email
-        send_welcome_email(new_user.email, new_user.username)
+        import threading
+        # Use a thread to send email without blocking the response
+        email_thread = threading.Thread(target=send_welcome_email, args=(new_user.email, new_user.username))
+        email_thread.start()
     except Exception as e:
-        print(f"Error sending welcome email: {e}")
+        print(f"Error initiating welcome email thread: {e}")
         # Don't fail registration if email fails
 
     access_token = create_access_token(identity=str(new_user.id))
