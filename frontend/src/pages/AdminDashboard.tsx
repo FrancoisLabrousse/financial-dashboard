@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import api from '../api';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { Users, FileText, Shield } from 'lucide-react';
+import { Users, FileText, Shield, Trash2 } from 'lucide-react';
 
 interface UserData {
     id: number;
@@ -17,6 +17,7 @@ const AdminDashboard: React.FC = () => {
     const [users, setUsers] = useState<UserData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const { user } = useAuth();
     const navigate = useNavigate();
 
@@ -26,19 +27,37 @@ const AdminDashboard: React.FC = () => {
             return;
         }
 
-        const fetchUsers = async () => {
-            try {
-                const response = await api.get('/admin/users');
-                setUsers(response.data);
-            } catch (err: any) {
-                setError(err.response?.data?.error || 'Failed to fetch users');
-            } finally {
-                setLoading(false);
-            }
-        };
-
         fetchUsers();
     }, [user, navigate]);
+
+    const fetchUsers = async () => {
+        try {
+            const response = await api.get('/admin/users');
+            setUsers(response.data);
+        } catch (err: any) {
+            setError(err.response?.data?.error || 'Failed to fetch users');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDelete = async (userId: number, username: string) => {
+        if (!window.confirm(`Êtes-vous sûr de vouloir supprimer l'utilisateur ${username} ? Cette action est irréversible.`)) {
+            return;
+        }
+
+        try {
+            await api.delete(`/admin/users/${userId}`);
+            setSuccess(`Utilisateur ${username} supprimé avec succès.`);
+            // Refresh list
+            fetchUsers();
+            // Clear message after 3 seconds
+            setTimeout(() => setSuccess(''), 3000);
+        } catch (err: any) {
+            setError(err.response?.data?.error || 'Erreur lors de la suppression');
+            setTimeout(() => setError(''), 3000);
+        }
+    };
 
     if (loading) return <div className="min-h-screen bg-slate-900 flex items-center justify-center text-white">Chargement...</div>;
 
@@ -64,6 +83,12 @@ const AdminDashboard: React.FC = () => {
                     </div>
                 )}
 
+                {success && (
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-4 rounded-xl mb-6">
+                        {success}
+                    </div>
+                )}
+
                 <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden">
                     <div className="p-6 border-b border-slate-700">
                         <h2 className="text-xl font-semibold text-white flex items-center gap-2">
@@ -81,6 +106,7 @@ const AdminDashboard: React.FC = () => {
                                     <th className="px-6 py-4">Rôle</th>
                                     <th className="px-6 py-4">Date d'inscription</th>
                                     <th className="px-6 py-4 text-center">Uploads</th>
+                                    <th className="px-6 py-4 text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-700">
@@ -102,6 +128,17 @@ const AdminDashboard: React.FC = () => {
                                                 <FileText size={14} />
                                                 {u.upload_count}
                                             </div>
+                                        </td>
+                                        <td className="px-6 py-4 text-right">
+                                            {!u.is_admin && (
+                                                <button
+                                                    onClick={() => handleDelete(u.id, u.username)}
+                                                    className="p-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-lg transition-colors"
+                                                    title="Supprimer l'utilisateur"
+                                                >
+                                                    <Trash2 size={18} />
+                                                </button>
+                                            )}
                                         </td>
                                     </tr>
                                 ))}

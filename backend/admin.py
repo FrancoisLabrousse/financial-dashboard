@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from models import db, User, Upload
+from models import db, User, Upload, Transaction
 
 admin_bp = Blueprint('admin', __name__)
 
@@ -45,3 +45,38 @@ def promote_self():
         return jsonify({"message": f"User {user.username} is now an admin and active"}), 200
     
     return jsonify({"error": "User not found"}), 404
+
+@admin_bp.route('/users/<int:user_id>', methods=['DELETE'])
+@jwt_required()
+def delete_user(user_id):
+    current_user_id = int(get_jwt_identity())
+    current_user = User.query.get(current_user_id)
+
+    if not current_user or not current_user.is_admin:
+        return jsonify({"error": "Admin access required"}), 403
+
+    user_to_delete = User.query.get(user_id)
+    if not user_to_delete:
+        return jsonify({"error": "User not found"}), 404
+        
+    if user_to_delete.id == current_user.id:
+        return jsonify({"error": "Cannot delete yourself"}), 400
+
+    try:
+        # Cascade delete: Transactions -> Uploads -> User
+        # Find all uploads for this user
+        uploads = Upload.query.filter_by(user_id=user_id).all()
+        for upload in uploads:
+            # Delete transactions for each upload
+            Transaction.query.filter_by(source_file_id=upload.id).delete()
+            # Delete the upload record
+            db.session.delete(upload)
+            
+        # Delete the user
+        db.session.delete(user_to_delete)
+        db.session.commit()
+        
+        return jsonify({"message": f"User {user_to_delete.username} deleted successfully"}), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
